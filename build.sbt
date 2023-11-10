@@ -1,4 +1,5 @@
-val scala3Version = "3.3.1"
+val scala_version = "3.3.1"
+// val scala_version = "2.13"
 
 lazy val root = project
 	.in(file("."))
@@ -6,8 +7,9 @@ lazy val root = project
 		name := "wetwellsim",
 		version := "0.1.0-SNAPSHOT",
 
-		scalaVersion := scala3Version,
+		scalaVersion := scala_version,
 
-		libraryDependencies ++= Seq("org.scalameta" %% "munit" % "0.7.29" % Test,
+		libraryDependencies ++= Seq(
+			"com.lihaoyi" %% "upickle" % "3.1.3",
 			"org.scalatest" %% "scalatest" % "3.2.13" % Test)
 	)
